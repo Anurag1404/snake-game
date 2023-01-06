@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("./Assets/bg.jpg");
+    background-size: 100vw 100vh;
+    max-height: 100vh;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.instructions {
+    height: max-content;
+    width: 16em;
+    position: absolute;
+    top: 2em;
+    left: 0.5rem;
+    font-family: 'Yeon Sung', cursive;
+    font-size: 1.5rem;
+    color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-heading {
+    color: black;
+    margin-bottom: 2em;
+    text-decoration: underline;
+}
+
+.up {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    height: 45px;
+}
+
+.lrd {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.common {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.down {
+    display: flex;
+    height: max-content;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5em;
+    margin-top: 3em;
+}
+
+.direction {
+    font-size: 1rem;
+    color: black;
+    font-weight: bolder;
+}
+
+.strt {
+    color: aqua;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.75;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.25;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#scoreBox {
+    height: max-content;
+    position: absolute;
+    top: 1em;
+    right: 5em;
+    font-family: 'Yeon Sung', cursive;
+    font-size: 2rem;
+    color: antiquewhite;
+}
+
+#hiScoreBox {
+    height: max-content;
+    position: absolute;
+    top: 3em;
+    right: 4em;
+    font-family: 'Yeon Sung', cursive;
+    font-size: 2rem;
+    color: gold;
+}
+
+#board {
+    background: linear-gradient(rgb(152, 221, 152) ,rgb(201, 201, 129));
+    width: 92vmin;
+    height: 92vmin;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+}
+
+.head {
+    background: url("./Assets/snake_face.png");
+    background-size: contain;
+    border-radius: 9px;
+    transform: scale(1.6);
+}
+
+.snake {
+    background-color: #e5e785;
+    border: .25vmin solid black ;
+    border-radius: 50%;    
+}
+
+.food {
+    background: url('./Assets/rat.png');
+    background-size: contain;
+    border-radius: 10px;
+}
