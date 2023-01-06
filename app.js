@@ -44,7 +44,6 @@ function gameEngine() {
     // Part 1: Updating Snake array & Food //
     if(iscollide(snakeArr)) {
         gameOverSound.play();
-        music.pause();
         inputDir = {x: 0, y: 0};
         alert("Game Over. Press any key to play again!");
         snakeArr = [{x:13, y:15}];
